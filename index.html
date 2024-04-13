@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Meeting Minutes</title>
+    <meta name="description" content="Lab 2">
+    <link rel="icon" href="favicon.ico" />
+</head>
+  <body>
+    <header><h1>Meeting #1</h1>
+    Date: 4/12
+    </header>
+    <br>
+    <section>
+        <h2>Table of Content</h2>
+        <nav>
+            <a href="#intro">Introduction</a> |
+            <a href="#ass">Assignment Briefing</a> |
+            <a href="#plan">Planning</a> |
+            <a href="#atten">Attendance</a>
+        </nav>
+    </section>
+    
+    <section id="intro">
+        <h3>Introduction</h3>
+        <ul>
+            <li>Name</li>
+            <li>Background</li>
+            <li>Skills</li>
+            <li>Hobbies</li>
+            <li>Major</li>
+            <li>Experience</li>
+        </ul>
+    </section>
+
+    <section id="ass">
+        <h3>Assignment Briefing</h3>
+        <hr>
+        <p>We need to figure out <b>team brand</b>, including <strong>name and logo</strong>. Additionally, we need to design our <i>team page</i> that includes our informations and project progress. Finally we should record an <em>introduction video</em>. <br>Here's our <a href="https://github.com/cse110-sp24-group27">team organization</a>.</p>
+        <hr>
+    </section>
+
+    <section id="plan">
+        <h3>Planning</h3>
+        <ul>
+            <li>
+                <h4>Team branding</h4>
+                Logo example: <br>
+                <img src="logo.png" alt="logo">
+            </li>
+            <li>
+                <h4>Intro video</h4>
+                <details>
+                    <summary>Sample Recources</summary>
+                    <p>
+                        <audio controls>
+                            <source src="bgm.mp3" type="audio/mpeg">
+                            Your browser does not support the audio tag.
+                        </audio>
+                        <br>
+                        <video width="320" height="240" controls>
+                            <source src="bg.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                          </video>
+                    </p>
+                  </details>
+            </li>
+        </ul>
+    </section>
+
+    <section id="atten">
+        <h4>Attendance</h4>
+        <form>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname"><br><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname"><br><br>
+            <input type="submit" value="Submit"><br><br>
+            <fieldset>
+                <legend>Logistics</legend>
+                <label for="date">Date reviewed:</label>
+                <input type="date" id="date"><br><br>
+                <label for="transport">Transportation method:</label>
+                <input list="list" id="transport">
+                <datalist id="list">
+                    <option value="Car">
+                    <option value="Bus">
+                    <option value="Bike">
+                    <option value="Feet">
+                    <option value="Plane">
+                </datalist><br><br>
+                <label for="role">Pick your role:</label>
+                <select name="roles" id="role">
+                    <option>Lead</option>
+                    <option>Designer</option>
+                    <option>Frontend</option>
+                    <option>Backend</option>
+                </select>
+                <p><label for="reason">Reason for late:</label></p>
+                <textarea id="reason" rows="4" cols="50"></textarea><br><br>
+                <input type="submit">
+            </fieldset>
+          </form>
+    </section>
+    <br>
+    <button type="button"><h1>Finished reading!</h1></button>
+    <br>
+    <footer>By: David Liu</footer>
+  </body>
+</html>
