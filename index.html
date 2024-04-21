@@ -4,14 +4,104 @@
     <title>Meeting Minutes</title>
     <meta name="description" content="Lab 2">
     <link rel="icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        * {
+            font-family: "Jersey 25", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }          
+        :root {
+            /* variables */
+            --main-font-color: rgb(115, 201, 115);
+            --main-bg-clor: rgb(166, 166, 229);
+            --lin-gradient: linear-gradient(105deg, rgb(0 249 255 / 100%) 39%, rgb(51 56 57 / 100%) 96%);
+            --rad-gradient: radial-gradient(circle, rgb(0 249 255 / 100%) 39%, rgb(51 56 57 / 100%) 96%);
+        }
+        header h1 {
+            background-color: var(--main-bg-clor);
+        }
+        #intro {
+            display: inline-block;
+        }
+        @media (min-width: 1000px) {
+            #intro,#ass {
+                background-image: var(--lin-gradient);
+                background-repeat: repeat-x;
+                background-size: 100%;
+            }
+        }
+        p::first-letter {
+            color: var(--main-font-color);
+        }
+        p {
+            text-decoration-line: underline;
+            text-align: center;
+        }
+        h3[class] {
+            background: var(--rad-gradient) center/500px repeat-x;
+            border: 1px solid black;
+        }
+        .topic {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        header {
+            margin: 10px 10px 10px 10px;
+            padding-top: 10px;
+            padding-bottom: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        #toc {
+            position: sticky;
+            top: 20px;
+            width: fit-content;
+            margin-left: 25%;
+            display: block;
+            border-style: groove;
+            border-color: aqua;
+            border-width: 3px;
+        }
+        ul {
+            display: block;
+            border-style: groove;
+            border-color: aqua;
+            border-radius: 10em;
+            border-width: 3px;
+            padding: 5px 20% 5px 20%;
+            max-width: 500px;
+            min-width: fit-content;
+        }
+        h3 ~ p {
+            color: red;
+        }
+        li:first-of-type + li {
+            color: red;
+        }
+        h3:has(+ ul) {
+            color: blue;
+        }
+        h3.topic {
+            width: 100px;
+            height: 40px;
+            text-align: center;
+        }
+        button {
+            position: relative;
+            left: 400px;
+        }
+    </style>
 </head>
   <body>
-    <header><h1>Meeting #1</h1>
+    <header><h1 style="color:aqua">Meeting #1</h1>
     Date: 4/12
     </header>
     <br>
-    <section>
-        <h2>Table of Content</h2>
+    <section id="toc">
+        <h2 style="color: var(--main-font-color)">Table of Content</h2>
         <nav>
             <a href="#intro">Introduction</a> |
             <a href="#ass">Assignment Briefing</a> |
@@ -40,7 +130,7 @@
     </section>
 
     <section id="plan">
-        <h3>Planning</h3>
+        <h3 class="topic">Planning</h3>
         <ul>
             <li>
                 <h4>Team branding</h4>
@@ -68,7 +158,7 @@
     </section>
 
     <section id="atten">
-        <h4>Attendance</h4>
+        <h4 class="topic">Attendance</h4>
         <form>
             <label for="fname">First name:</label>
             <input type="text" id="fname"><br><br>
